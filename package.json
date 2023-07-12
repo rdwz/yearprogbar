@@ -1,0 +1,49 @@
+{
+  "name": "yearsprogress",
+  "version": "1.0.0",
+  "description": "Meta's Threads bot that posts current year progress bar updates",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s1mpson/yearsprogress.git"
+  },
+  "keywords": [
+    "meta",
+    "instagram",
+    "threads",
+    "bot",
+    "threads-bot",
+    "threads-api",
+    "threads-client"
+  ],
+  "author": {
+    "name" : "Max Mykhalchuk",
+    "email" : "s1mpsondevs@gmail.com",
+    "url" : "https://s1mpson.dev/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s1mpson/yearsprogress/issues"
+  },
+  "homepage": "https://github.com/s1mpson/yearsprogress#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
