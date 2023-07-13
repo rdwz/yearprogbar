@@ -25,9 +25,9 @@
     "threads-client"
   ],
   "author": {
-    "name" : "Max Mykhalchuk",
-    "email" : "s1mpsondevs@gmail.com",
-    "url" : "https://s1mpson.dev/"
+    "name": "Max Mykhalchuk",
+    "email": "s1mpsondevs@gmail.com",
+    "url": "https://s1mpson.dev/"
   },
   "license": "MIT",
   "bugs": {
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/s1mpson/yearsprogress#readme",
   "devDependencies": {
+    "@types/cron": "^2.0.1",
     "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -45,5 +46,11 @@
     "prettier": "^3.0.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "cron": "^2.3.1",
+    "dayjs": "^1.11.9",
+    "threads-api": "^1.4.0"
   }
 }
