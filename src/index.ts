@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { program, OptionValues } from 'commander';
 import { CronJob } from 'cron';
 import { ThreadsAPI } from 'threads-api';
@@ -13,7 +15,7 @@ program
   .description(
     "Meta's Threads bot that posts current year progress bar updates",
   )
-  .version('1.0.0');
+  .version('1.0.1');
 
 program
   .requiredOption('-u, --username <username>', 'threads username')

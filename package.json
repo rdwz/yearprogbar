@@ -1,9 +1,12 @@
 {
   "name": "yearsprogress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Meta's Threads bot that posts current year progress bar updates",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "yearsprogress": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
@@ -15,6 +18,9 @@
     "type": "git",
     "url": "https://github.com/s1mpson/yearsprogress.git"
   },
+  "files": [
+		"dist"
+	],
   "keywords": [
     "meta",
     "instagram",
