@@ -1,5 +1,6 @@
 # yearsprogress
 
+[![npm version](https://img.shields.io/npm/v/yearsprogress)](https://www.npmjs.com/package/yearsprogress)
 [![install size](https://packagephobia.com/badge?p=yearsprogress)](https://packagephobia.com/result?p=yearsprogress)
 [![license](https://img.shields.io/github/license/s1mpson/yearsprogress)](https://github.com/s1mpson/yearsprogress)
 [![style: prettier](https://badgen.net/badge/style/prettier/ff69b4)](https://github.com/prettier/prettier)
