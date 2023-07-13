@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    ".cspell.json"
+  ],
+  "dictionaries": [
+    "softwareTerms",
+    "typescript",
+    "node",
+    "filetypes",
+    "npm"
+  ],
+  "words": [
+    "Mykhalchuk",
+    "yearsprogress"
+  ]
+}
