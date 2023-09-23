@@ -31,6 +31,7 @@ $ yearsprogress [options]
 - `-u, --username <username>`: (required) Specifies the Threads username.
 - `-p, --password <password>`: (required) Specifies the Threads password.
 - `-f, --force`: (optional) Forces the app to post the current progress.
+- `-d, --debug`: (optional) Runs the app in local, console.log only mode.
 
 ## Examples
 
@@ -44,4 +45,10 @@ $ yearsprogress -u your_username -p your_password
 
 ```bash
 $ yearsprogress -u your_username -p your_password -f
+```
+
+3. Post the current year progress on start while running in debug mode:
+
+```bash
+$ yearsprogress -u your_username -p your_password -f -d
 ```
