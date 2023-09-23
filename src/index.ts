@@ -3,6 +3,7 @@
 import { program, OptionValues } from 'commander';
 import { CronJob } from 'cron';
 import { ThreadsAPI } from 'threads-api';
+import boxen from 'boxen';
 import dayjs from 'dayjs';
 import dayOfYear from 'dayjs/plugin/dayOfYear';
 import isLeapYear from 'dayjs/plugin/isLeapYear';
@@ -15,12 +16,13 @@ program
   .description(
     "Meta's Threads bot that posts current year progress bar updates",
   )
-  .version('1.0.1');
+  .version('1.1.0');
 
 program
   .requiredOption('-u, --username <username>', 'threads username')
   .requiredOption('-p, --password <password>', 'threads password')
-  .option('-f, --force', 'force post the current progress', false);
+  .option('-f, --force', 'force post the current progress', false)
+  .option('-d, --debug', 'run in local, console.log only mode', false);
 
 interface ProgressBarOptions {
   width: number;
@@ -71,14 +73,27 @@ function createYearUpdateMessage(
 }
 
 async function postToThreads(botOptions: OptionValues, message: string) {
-  const threadsAPI = new ThreadsAPI({
-    username: botOptions.username,
-    password: botOptions.password,
-  });
+  if (!botOptions.debug) {
+    const threadsAPI = new ThreadsAPI({
+      username: botOptions.username,
+      password: botOptions.password,
+    });
 
-  await threadsAPI.publish({
-    text: message,
-  });
+    await threadsAPI.publish({
+      text: message,
+    });
+  }
+
+  console.log(
+    boxen(message, {
+      padding: 1,
+      margin: 1,
+      borderColor: botOptions.debug ? 'blue' : 'green',
+      borderStyle: 'round',
+      title: dayjs().format('MMM M, YYYY, h:mm A'),
+      titleAlignment: 'center',
+    }),
+  );
 }
 
 const botOptions = program.parse().opts();
